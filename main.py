@@ -12,7 +12,6 @@ def converter_para_mp3(arquivo_origem):
         audio = AudioFileClip(arquivo_origem)
         
         # Salva como mp3
-        # O parâmetro n_bytes=4 ajuda na compatibilidade com alguns players
         # Usando qualidade variável (0 é a melhor, 9 é a menor - 4 é um ótimo equilíbrio)
         audio.write_audiofile(arquivo_destino, codec="libmp3lame", ffmpeg_params=["-q:a", "4"])
         
@@ -27,4 +26,4 @@ def converter_para_mp3(arquivo_origem):
 
 if __name__ == '__main__':
     # Teste com seu arquivo opus
-    converter_para_mp3("Audio 2025-12-26 at 11.49.48.aac")
+    converter_para_mp3("arquivo.aac")
