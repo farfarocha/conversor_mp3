@@ -25,5 +25,8 @@ def converter_para_mp3(arquivo_origem):
 
 
 if __name__ == '__main__':
-    # Teste com seu arquivo opus
-    converter_para_mp3("arquivo.aac")
+    arquivo_audio = "arquivo.aac"
+    try:
+        converter_para_mp3(arquivo_audio)
+    except Exception as e:
+        print(f"Erro na conversão: {e}")
